@@ -4,10 +4,10 @@ QCMA is a Rust implementation of the Quine McCluskey Algorithm. Throughout the i
 The project is still in the beta stage and needs a lot of work for practical purposes. Contributions are always welcome. Please see todo list below.
 
 ## Things ToDo for 0.1.1 Release
-[ ] Split code between multiple files
-[ ] Refactor functions into methods
-[ ] Add file input and output features (CSV? YAML?)
-[ ] Add help section
-[ ] Carefully go through code and increase efficiency
-[ ] Add progress bar(s)
-[ ] Prepare Hombrew/apt/Windows toolchain
+- [ ] Split code between multiple files
+- [ ] Refactor functions into methods
+- [ ] Add file input and output features (CSV? YAML?)
+- [ ] Add help section
+- [ ] Carefully go through code and increase efficiency
+- [ ] Add progress bar(s)
+- [ ] Prepare Hombrew/apt/Windows toolchain
