@@ -1,5 +1,5 @@
-# qcma
-QCMA is a Rust implementation of the Quine McCluskey Algorithm. Throughout the implementation small modifications have been made to reduce iterations/comparisons and increase efficiency. 
+# qmca
+QMCA is a Rust implementation of the Quine McCluskey Algorithm. Throughout the implementation small modifications have been made to reduce iterations/comparisons and increase efficiency. 
 
 The project is still in the beta stage and needs a lot of work for practical purposes. Contributions are always welcome. Please see todo list below.
 
@@ -11,3 +11,5 @@ The project is still in the beta stage and needs a lot of work for practical pur
 - [ ] Carefully go through code and increase efficiency
 - [ ] Add progress bar(s)
 - [ ] Prepare Hombrew/apt/Windows toolchain
+- [ ] Add support for POS and Don't-Cares
+- [ ] Add testing and error handling
