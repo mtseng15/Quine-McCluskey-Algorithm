@@ -1,7 +1,11 @@
 use std::convert::TryFrom;
 use std::io::{self, Write};
+use std::fs::File;
 use structopt::StructOpt;
 use std::path::PathBuf;
+use std::error::Error;
+
+extern crate csv;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -43,7 +47,11 @@ fn main() -> std::io::Result<()> {
 
     let args = Cli::from_args();
 
-    println!("{:?}", args.input);
+    println!("{:?}", args.input.clone());
+
+    let real_sop = get_sop(args.input);
+
+    println!("{:#?}", real_sop);
 
     let sop: Vec<u32> = vec![27, 15, 16, 29, 28, 0,4,6,8];
 
@@ -72,6 +80,25 @@ fn main() -> std::io::Result<()> {
     
     Ok(())
 
+}
+
+
+fn get_sop(input_path: PathBuf) -> Result<Vec<u32>, Box<Error>> {
+    let a: Vec<u32> = vec![1,2,3,4];
+
+    let file = File::open(input_path)?;
+
+    let mut rdr = csv::Reader::from_reader(file);
+
+    for result in rdr.records() {
+        let record = result?;
+        println!("{:?}", record);
+    }
+    
+
+
+
+    Ok(a)
 }
 
 fn table_print(table: Vec<Row>) {

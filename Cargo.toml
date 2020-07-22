@@ -10,6 +10,7 @@ edition = "2018"
 structopt = { version = "0.3", default-features = false }
 failure = "0.1.8"
 exitfailure = "0.5.1"
+csv = "1.1"
 
 
 
