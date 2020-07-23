@@ -3,6 +3,17 @@ QMCA is a Rust implementation of the Quine McCluskey Algorithm. Throughout the i
 
 The project is still in the beta stage. It works, but it ain't pretty. It needs a lot of work for practical purposes. Contributions are always welcome. Please see todo list below.
 
+## Demo
+![Short Demo](demo/qmca_demo1.gif)
+
+![Hyperfine benchmark of 1000 entries](demo/qmca_hyperfine_benchmark.gif)
+
+## Features
+- Fast
+- CSV input
+- Cross platform (eventually)
+- Memory Safe
+
 ## Things ToDo for 0.1.1 Release
 - [ ] Split code between multiple files
 - [ ] Refactor functions into methods
