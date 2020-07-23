@@ -5,8 +5,11 @@ The project is still in the beta stage. It works, but it ain't pretty. It needs 
 
 ## Demo
 ![Short Demo](demo/qmca_demo1.gif)
+Small demo of `qmca` with eight min-terms. Data is within the `/test_data` folder.
+
 
 ![Hyperfine benchmark of 1000 entries](demo/qmca_hyperfine_benchmark.gif)
+[Hyperfine](https://github.com/sharkdp/hyperfine) benchmark of 1,000 min-terms. Data is within the `/test_data` folder.
 
 ## Features
 - Fast
