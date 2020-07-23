@@ -47,6 +47,8 @@ pub fn table_print(table: Vec<Row>) {
 
     }
 
+    write!(handle, "\nNumber of prime essential implicants: {}\n", table.len()).expect("write error");
+
 }
 
 // Reduce the table to prime, essential implicants

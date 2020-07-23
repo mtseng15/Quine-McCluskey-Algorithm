@@ -9,10 +9,18 @@ use table::comparison;
 use table::reduce_to_prime_implicants;
 use table::table_print;
 
-
+extern crate serde;
+use serde::Deserialize;
 extern crate csv;
 extern crate clap;
 use clap::{Arg, App};
+
+#[derive(Deserialize, Debug)]
+#[serde(rename_all = "PascalCase")]
+struct Data {
+    Sop: u32
+
+}
 
 fn main() -> std::io::Result<()> {
 
@@ -68,18 +76,15 @@ fn get_sop(input_path: & str) -> Result<Vec<u32>, csv::Error> {
 
     // Open the file
     let file = File::open(input_path)?;
-
-    // Create the file reader and then read the csv from the file
-    let mut rdr = csv::ReaderBuilder::new()
-        .has_headers(false)
-        .from_reader(file);
+    // Get the reade
+    let mut rdr = csv::Reader::from_reader(file);
 
     // Grab the results and spit them into a Vec<u32>
-    for result in rdr.records() {
-        let record = result?;
-        for entry in record.iter() {
-            sop.push(entry.parse::<u32>().unwrap());
-        }
+    for result in rdr.deserialize() {
+        let record: Data = result?;
+
+        sop.push(record.Sop);
+
     }
 
     Ok(sop)

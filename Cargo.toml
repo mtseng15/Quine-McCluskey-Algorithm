@@ -1,6 +1,6 @@
 [package]
 name = "qmca"
-version = "0.1.0"
+version = "0.0.2"
 authors = ["mtseng15 <tseng.micah@gmail.com>"]
 edition = "2018"
 
@@ -9,6 +9,8 @@ edition = "2018"
 [dependencies]
 # structopt = { version = "0.3", default-features = false }
 clap = "2.33.1"
+serde = { version = "1.0.114", features = ["derive"] }
+syn = "1.0.35"
 failure = "0.1.8"
 exitfailure = "0.5.1"
 csv = "1.1"
